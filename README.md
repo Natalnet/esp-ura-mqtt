@@ -24,9 +24,9 @@
 
 ## 💻 Sobre o projeto
 
-Este projeto consistem é um criar 2 servidores e uma aplicativo mobile para fazer a comunicação com um ESP 8266 via MQTT
+Este projeto consistem é um criar 2 servidores e um aplicativo mobile para fazer a comunicação com um ESP 8266 via MQTT
 
-O Aplicativo enviará uma requisição para API e ela mandará o servidor MQTT fazer um publisher para uma rota onde você irá determinar com a mensagem presenta na requisição.
+O Aplicativo enviará uma requisição para API e ela mandará o servidor MQTT fazer um publisher para uma rota onde você irá determinar com a mensagem presente na requisição.
 
 O ESP 8266 ficará ouvindo as mensagens da rota que você determinou e fazer o que você determinar dependendo da mensagem que ele está escutando.
 
