@@ -1,6 +1,6 @@
 import mqtt from 'mqtt'
 
-const client = mqtt.connect('mqtt://192.168.1.5')
+const client = mqtt.connect('mqtt://ip-da-sua-máquina')
 
 client.on('connect', () => {
   console.log('publisher on')

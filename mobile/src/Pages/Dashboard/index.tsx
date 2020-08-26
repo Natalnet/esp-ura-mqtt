@@ -3,8 +3,6 @@ import { Button, Alert, View } from "react-native";
 
 import api from "../../services/api";
 
-// import { Container } from './styles';
-
 const Dashboard: React.FC = () => {
   useEffect(() => {
     async function tryConection() {
