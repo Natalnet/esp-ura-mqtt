@@ -72,7 +72,7 @@ $ yarn dev:server
 
 # Abra o segundo terminal aonde o servidor MQTT executará
 $ yarn dev:broker
-#  O servidor executará no ip da sua máquina porta 1883
+#  O servidor executará no ip da sua máquina na porta 1883
 # Um log como esse irá aparecer: Servidor rodando na porta 1883
 
 # Abra o terceiro terminal aonde o subscriber executará
