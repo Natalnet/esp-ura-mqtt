@@ -137,7 +137,7 @@ Feito com ❤️ por Pedro henrique 👋🏽 [Entre em contato!](https://www.lin
 
 [nodejs]: https://nodejs.org/
 [typescript]: https://www.typescriptlang.org/
-[expo]: https://expo.io/
+[expo]: https://docs.expo.io/get-started/installation/
 [reactjs]: https://reactjs.org
 [rn]: https://facebook.github.io/react-native/
 [yarn]: https://yarnpkg.com/
