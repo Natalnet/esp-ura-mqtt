@@ -1,7 +1,7 @@
 import { Request, Response } from 'express'
 import mqtt from 'mqtt'
 
-const client = mqtt.connect('mqtt://192.168.1.5')
+const client = mqtt.connect('mqtt://192.168.1.9')
 
 class ForwardController {
   async frente(request: Request, response: Response) {

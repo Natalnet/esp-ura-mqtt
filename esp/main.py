@@ -2,6 +2,8 @@
 from hcsr04 import HCSR04
 import time
 
+sensor = HCSR04(trigger_pin=14, echo_pin=12)
+
 def sub_cb(topic, msg):
   print((topic, msg))
   if topic == b'URA/robo1/acao' and msg == b'f':
@@ -22,7 +24,10 @@ def sub_cb(topic, msg):
     robot.stop()
   if topic == b'URA/robo1/acao' and msg == b'b':
     print('ESP received, backward')
-    robot.backward()  
+    robot.backward()
+  if topic == b'URA/robo1/acao' and msg == b't':
+    distance = sensor.distance_cm()
+    client.publish('URA/robo1/distance', str(distance))
   command = msg; 
 def connect_and_subscribe():
   global client_id, mqtt_server, topic_sub, server_port, mqtt_user, mqtt_password

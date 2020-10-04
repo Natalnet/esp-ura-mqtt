@@ -1,6 +1,7 @@
 import express from 'express'
 import router from './routes'
 import cors from 'cors'
+import api from './services/api'
 
 const app = express()
 
@@ -13,3 +14,9 @@ const port = 4444
 app.listen(port, () => {
   console.log(`Servidor iniciado na porta ${port}`)
 })
+
+setInterval(() => {
+  api.post('/sentido', {
+    sentido: 't'
+  })
+}, 400)

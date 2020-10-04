@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background: #ccc;
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.button {
+  width: 301px;
+  height: 76px;
+  border: 0;
+  margin: 20px;
+  border-radius: 15px;
+  font-size: 22px;
+  background: #1234;
+}
