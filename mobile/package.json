@@ -14,12 +14,15 @@
     "react": "~16.11.0",
     "react-dom": "~16.11.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-38.0.2.tar.gz",
-    "react-native-web": "~0.11.7"
+    "react-native-gesture-handler": "~1.6.0",
+    "react-native-web": "~0.11.7",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.6",
     "@types/react": "~16.9.41",
     "@types/react-native": "~0.62.13",
+    "@types/styled-components": "^5.1.4",
     "typescript": "~3.9.5"
   },
   "private": true

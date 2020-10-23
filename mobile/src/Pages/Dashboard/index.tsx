@@ -1,9 +1,29 @@
-import React, { useCallback, useEffect } from "react";
-import { Button, Alert, View } from "react-native";
+import React, { useCallback, useEffect, useState } from "react";
+import { Alert, View } from "react-native";
 
 import api from "../../services/api";
 
+import {
+  LogoImage,
+  Container,
+  SideContainer,
+  StopButton,
+  Distance,
+} from "./styles";
+
+import logo from "../../assets/logo-ura.png";
+
+import Button from "../../components/Button/index";
+
 const Dashboard: React.FC = () => {
+  const [distance, setDistance] = useState<number>();
+
+  setTimeout(async () => {
+    api.get("/distance").then((response) => {
+      setDistance(response.data);
+    });
+  }, 1050);
+
   useEffect(() => {
     async function tryConection() {
       try {
@@ -47,12 +67,16 @@ const Dashboard: React.FC = () => {
   }, []);
 
   return (
-    <View style={{ flex: 1, justifyContent: "center" }}>
-      <Button title="Frente" onPress={handleForward} />
-      <Button title="Esquerda" onPress={handleLeft} />
-      <Button title="Direita" onPress={handleRight} />
-      <Button title="Parar" onPress={handleStop} />
-    </View>
+    <Container style={{ flex: 1, justifyContent: "center" }}>
+      <LogoImage source={logo} />
+      <Button onPress={handleForward}>Frente</Button>
+      <SideContainer>
+        <Button onPress={handleLeft}>Esquerda</Button>
+        <Button onPress={handleRight}>Direita</Button>
+      </SideContainer>
+      <StopButton onPress={handleStop}>Parar</StopButton>
+      <Distance>Distância do obstáculo: {distance} cm</Distance>
+    </Container>
   );
 };
 

@@ -28,6 +28,8 @@ def sub_cb(topic, msg):
   if topic == b'URA/robo1/acao' and msg == b't':
     distance = sensor.distance_cm()
     client.publish('URA/robo1/distance', str(distance))
+    print(distance)
+
   command = msg; 
 def connect_and_subscribe():
   global client_id, mqtt_server, topic_sub, server_port, mqtt_user, mqtt_password
